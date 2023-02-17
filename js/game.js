@@ -15,6 +15,8 @@ const characters = [
   'pickle-rick'
 ]
 
+
+
 const createElement = (element, className) => {
   const newElement = document.createElement(element)
   newElement.className = className
@@ -32,7 +34,18 @@ const checkEndGame = () => {
     const endGameText = createElement('h1', 'end-game-text')
     endGameText.innerText = 'Parabéns, você ganhou! em ' + timer.innerHTML + ' segundos'
     endGame.appendChild(endGameText)
+
+    const restartButton = createElement('button', 'restart-button')
+    restartButton.innerText = 'Reiniciar'
+    restartButton.addEventListener('click', () => {
+      location.reload();
+    })
+    endGame.appendChild(restartButton)
     grid.appendChild(endGame)
+
+
+
+    document.body.classList.add('blur')
   }
 }
   

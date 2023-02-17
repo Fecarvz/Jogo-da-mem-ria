@@ -72,6 +72,45 @@ header {
   opacity: 0.5;
 }
 
+.end-game {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.end-game-text {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+.restart-button {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 10px 0; 
+  cursor: pointer; 
+}
+
+.restart-button:hover {
+  background-color: #3e8e41; /* cor de fundo quando o mouse passa por cima */
+}
+
+
+
 @media screen and (max-width:920px) {
   .grid {
     grid-template-columns: repeat(5, 1fr);
