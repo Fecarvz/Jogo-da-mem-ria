@@ -38,7 +38,8 @@ const checkEndGame = () => {
     const restartButton = createElement('button', 'restart-button')
     restartButton.innerText = 'Reiniciar'
     restartButton.addEventListener('click', () => {
-      location.reload();
+      localStorage.clear('player')
+      window.location = '../index.html'
     })
     endGame.appendChild(restartButton)
     grid.appendChild(endGame)
@@ -125,7 +126,7 @@ const startTimer = () => {
 }
 
 window.onload = () => {
-  spanPlayer.innerHTML = localStorage.getItem('username');
+  spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   loadGame();
 }
